@@ -41,6 +41,8 @@ Notes from official documentation (https://api.jquery.com/)
 
   Internally, selector context is implemented with the .find() method, so $( "span", this ) is equivalent to $( this ).find( "span" ).
 
+
+
   
   
   
