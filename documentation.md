@@ -2,7 +2,7 @@
 Notes from official documentation (https://api.jquery.com/) 
 
 
-#jQuery()
+# jQuery()
 
   Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
 
