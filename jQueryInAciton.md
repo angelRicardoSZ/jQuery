@@ -91,5 +91,27 @@ output>>   S.fn.init(8) [html, head, meta, title, body, p, script, script, prev
      
      
      
+  2.2.4 The Element selector
+     
+     The Element selector allows you to pick up elements based on their tag name. Because of its support in almost any browser (including IE6), jQuery uses get-
+     ElementsByTagName() to select elements by tag name behind the scenes.
+     
+    Example
+
+       If say you want all the <div>s in a page
+
+       var $divs = $('div');
+      
+       if you want all <div>s having class clearfix
+     
+       var $clearfixDivs = $('div.clearfix');
+     
+     
+     
+     
+     
+     
+     
+     
      
 
