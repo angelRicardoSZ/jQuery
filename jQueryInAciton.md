@@ -107,7 +107,7 @@ output>>   S.fn.init(8) [html, head, meta, title, body, p, script, script, prev
        var $clearfixDivs = $('div.clearfix');
      
      
-     2.3 Retrieving elements by their hierarchy
+2.3 Retrieving elements by their hierarchy
      
      Sometimes you may want to select only the direct chil-dren of a certain element.
      
@@ -138,7 +138,7 @@ output>>   S.fn.init(8) [html, head, meta, title, body, p, script, script, prev
      
     selector: ul.my-list > li > a
      
-    2.4 Selecting elements using attributes
+ 2.4 Selecting elements using attributes
      
      Attribute selectors are extremely powerful and allow you to select elements based on their attributes. You can easily recognize these selectors because they’re wrapped with square brackets (for example, [selector]).
      
@@ -159,10 +159,10 @@ output>>   S.fn.init(8) [html, head, meta, title, body, p, script, script, prev
     selector: a[href^='http://']
      
      
-     2.5 Introducing filters
+ 2.5 Introducing filters
      
      
-     2.5.1 Position filters
+   2.5.1 Position filters
      
      This format of selector matches the first <a> on the page.
      
@@ -187,7 +187,7 @@ output>>   S.fn.init(8) [html, head, meta, title, body, p, script, script, prev
      
      
      
-     2.5.2 Child filters
+   2.5.2 Child filters
      
      Example 1:
      
