@@ -159,6 +159,34 @@ output>>   S.fn.init(8) [html, head, meta, title, body, p, script, script, prev
     selector: a[href^='http://']
      
      
+     2.5 Introducing filters
+     
+     
+     2.5.1 Position filters
+     
+     This format of selector matches the first <a> on the page.
+     
+     a:first 
+     
+     
+     
+     Table 2.4 The position filters supported by jQuery
+     
+     Selector             |          Description                                                              
+     -----------------------------------------------------------------------------------------------------------------------------------------------------
+     :first               |       Selects the first match within the context. li a:first returns the first anchor that’s a descendant of a list item.
+     -----------------------------------------------------------------------------------------------------------------------------------------------------
+     :last                |       Selects the last match within the context. li a:last returns the last anchor that’s a descendant of a list item.
+     -----------------------------------------------------------------------------------------------------------------------------------------------------
+     :even                |       Selects even elements within the context. li:even returns every even-indexed list item.
+     -----------------------------------------------------------------------------------------------------------------------------------------------------
+     :eq(n)               |     Selects the nth matching element.
+     -----------------------------------------------------------------------------------------------------------------------------------------------------
+     
+     
+     
+     
+     
      
      
      
