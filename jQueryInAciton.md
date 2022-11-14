@@ -187,6 +187,84 @@ output>>   S.fn.init(8) [html, head, meta, title, body, p, script, script, prev
      
      
      
+     2.5.2 Child filters
+     
+     Example 1:
+     
+     the last <li> child of each <ul> element is matched.
+     
+     ul li:last-child
+     
+     Example 2: 
+     
+     All <p>s inside a <div> that are the fourth child of their parent element.
+     
+     div p:nth-child(4)
+     
+     
+     
+     
+     Table 2.5 The Child filters of jQuery
+     
+     Selector          |           Description                                               |  In CSS?
+    -----------------------------------------------------------------------------------------------------------------------------------------------------
+     :first-child      |  Matches the first child element within the context                 |  yes
+     -----------------------------------------------------------------------------------------------------------------------------------------------------
+     :first-of-type    |  Matches the first child element of the given type                  |  yes
+     -----------------------------------------------------------------------------------------------------------------------------------------------------
+     :nth-child(n)     |  Matches the nth child element, even or odd child                   |  yes
+     :nth-child(even|odd)  |  elements, or nth child element computed by the                 |  yes
+     :nth-child(Xn+Y)  |  supplied formula within the context based on the                   |  yes
+                       |  given parameter                                                    |
+     
+     Example 3: 
+     
+     <table id="languages">
+    <thead>
+    <tr>
+    <th>Language</th>
+    <th>Type</th>
+    <th>Invented</th>
+    </tr>
+      </thead>
+    <tbody>
+    <tr>
+    <td>Java</td>
+    <td>Static</td>
+    <td>1995</td>
+    </tr>
+    <tr>
+    <td>Ruby</td>
+    <td>Dynamic</td>
+    <td>1993</td>
+    </tr>
+    <tr>
+    <td>Smalltalk</td>
+    <td>Dynamic</td>
+    <td>1972</td>
+    </tr>
+    <tr>
+    <td>C++</td>
+    <td>Static</td>
+    <td>1983</td>
+    </tr>
+    </tbody>
+    </table>
+     
+     All of the table cells that contain the names of programming languages.
+     
+        #languages td:first-child or #languages td:nth-child(1)
+     
+     The name of the languages and their year of creation using :nth-child().
+     
+        #languages td:nth-child(odd)
+      
+     
+     
+     
+     
+     
+     
      
      
      
