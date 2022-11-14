@@ -107,6 +107,57 @@ output>>   S.fn.init(8) [html, head, meta, title, body, p, script, script, prev
        var $clearfixDivs = $('div.clearfix');
      
      
+     2.3 Retrieving elements by their hierarchy
+     
+     Sometimes you may want to select only the direct chil-dren of a certain element.
+     
+     Example
+     
+     
+     Suppose that you wanted to select the a element pointing to the jQuery website but not those to various local pages describing the different CSS   specifications.
+   
+    html 
+     
+      <ul class="my-list">
+      <li>
+      <a href="http://jquery.com">jQuery supports</a>
+      <ul>
+      <li><a href="css1">CSS1</a></li>
+      <li><a href="css2">CSS2</a></li>
+      <li><a href="css3">CSS3</a></li>
+      <li>Basic XPath</li>
+      </ul>
+      </li>
+      <li>jQuery also supports
+      <ul>
+      <li>Custom selectors</li>
+      <li>Form selectors</li>
+      </ul>
+      </li>
+      </ul> 
+     
+    selector: ul.my-list > li > a
+     
+    2.4 Selecting elements using attributes
+     
+     Attribute selectors are extremely powerful and allow you to select elements based on their attributes. You can easily recognize these selectors because they’re wrapped with square brackets (for example, [selector]).
+     
+     Example
+     
+     <ul>
+    <li>
+    <a href="http://jquery.com">jQuery supports</a>
+    <ul>
+    <li><a href="css1">CSS1</a></li>
+    <li><a href="css2">CSS2</a></li>
+    <li><a href="css3">CSS3</a></li>
+    <li>Basic XPath</li>
+    </ul>
+    </li>
+    </ul>
+     
+    selector: a[href^='http://']
+     
      
      
      
