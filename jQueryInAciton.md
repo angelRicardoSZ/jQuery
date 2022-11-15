@@ -199,10 +199,7 @@ output>>   S.fn.init(8) [html, head, meta, title, body, p, script, script, prev
      
      All <p>s inside a <div> that are the fourth child of their parent element.
      
-     div p:nth-child(4)
-     
-     
-     
+     div p:nth-child(4)  
      
      Table 2.5 The Child filters of jQuery
      
@@ -259,6 +256,43 @@ output>>   S.fn.init(8) [html, head, meta, title, body, p, script, script, prev
      
         #languages td:nth-child(odd)
       
+     
+ 2.5.3 Form filters
+     
+     You might want to match all check boxes that are in a checked state. You might be tempted to try something along these lines:
+     
+      $('input[type="checkbox"][checked]');
+     
+     What you really want to check is the real-time state of the
+
+      controls. CSS offers a pseudo-class, :checked, that matches elements that are in a checked state. For example, whereas the input[type="checkbox"] selector selects all input elements that are check boxes, the input[type="checkbox"]:checked selector narrows the search to only input elements that are check boxes and are currently checked.
+     
+     When rewriting your previous statement to select all the check boxes that are currently checked using the filter, you can write
+     
+      $('input[type="checkbox"]:checked');
+     
+     jQuery also provides a handful of powerful custom filter selectors, not specified by CSS, that make identifying target elements even easier. For example, the custom :checkbox selector identifies all check box elements. Combining these custom selec- tors can be powerful and shrink your selectors even more. Consider rewriting once again our example using filters only:
+     
+        $('input:checkbox:checked');
+     
+     Table 2.6   The CSS and custom jQuery filter selectors
+     
+     Selector       |                       Description                                                                                          |  In CSS?
+     ------------------------------------------------------------------------------------------------------------------------------------------------------
+     :button        |     Selects only button elements (input[type=submit], input[type=reset], input[type=button], or button)                    |  no
+     -------------------------------------------------------------------------------------------------------------------------------------------------------
+     :checkbox      |    Selects only check box elements (input[type=checkbox])                                                                  |  no
+     -------------------------------------------------------------------------------------------------------------------------------------------------------
+     :checked       |     Selects check boxes or radio elements in the checked state or options of select elements that are in a selected state  |  yes
+     -------------------------------------------------------------------------------------------------------------------------------------------------------
+      :disabled      |      Selects only elements in the disabled state                                                                          |  yes     
+     -------------------------------------------------------------------------------------------------------------------------------------------------------
+     
+     For example, if you want to select only enabled and checked check boxes, you could use
+     
+        $('input:checkbox:checked:enabled');
+  
+     
      
      
      
